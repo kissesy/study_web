@@ -58,6 +58,7 @@ int page_view(void* p, onion_request* req, onion_response* res){
     }
     onion_response_printf(res, "%s", buffer);
     free(buffer);
+	TMPL_free_varlist(context);
     return OCS_PROCESSED;
 }
 
